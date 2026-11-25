@@ -1,0 +1,11 @@
+global:
+  scrape_interval: 5s
+
+scrape_configs:
+  - job_name: 'pages-service'
+    static_configs:
+      - targets: ['pages-service:8000']
+
+  - job_name: 'analytics-service'
+    static_configs:
+      - targets: ['analytics-service:8001']
